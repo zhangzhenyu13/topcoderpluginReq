@@ -20,7 +20,7 @@ function showResult(){
   var result="";
   for(let  i=0;i<5&&i<n_users;i++){
     let userurl="https://www.topcoder.com/members/"+userlist[i];
-    result=result+"<h5><a href="+userurl+" name='top user'>Top "+(i+1)+": "+userlist[i]+"</a></h5>"
+    result=result+"<h3><a href="+userurl+" name='top user'>Top "+(i+1)+": "+userlist[i]+"</a></h3>"
 
   }
   plist.innerHTML=result;
