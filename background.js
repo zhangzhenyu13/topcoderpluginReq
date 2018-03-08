@@ -39,6 +39,7 @@ chrome.runtime.onMessage.addListener(function(msg) {
 });
 //window.alert("b_3");
 chrome.tabs.onUpdated.addListener(checkForValidUrl);
+//chrome.tabs.onActivated.addListener(checkForValidUrl)
 //window.alert("b_4");
 chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
     chrome.tabs.executeScript(null,{file:"content_script.js"});
