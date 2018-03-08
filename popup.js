@@ -52,8 +52,8 @@ function setList(){
   
 }
 
-function newtab(){
-  chrome.tabs.create({url:topusers[counter].href})
+function newtab(index){
+  chrome.tabs.create({url:topusers[index].href})
 }
 
 function clickUser(){
@@ -67,7 +67,7 @@ function clickUser(){
     //console.log(typeof topusers[i]);
     console.log(topusers[i].href);
     //console.log(topusers[i]);
-    topusers[i].onclick = newtab;
+    topusers[i].onclick = Function("newtab("+i+")");
   }
 }
 
